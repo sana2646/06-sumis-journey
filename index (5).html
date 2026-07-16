@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sumi's Journey</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="game-wrapper">
+    <img src="img/cw_logo.png" alt="charity: water logo" style="width:150px; margin-top:20px;">
+    <h1 class="game-title">Sumi's Journey</h1>
+    <p class="game-tagline">Help Sumi find clean water for her village! 💧</p>
+
+    <div class="score-panel">
+      <div class="score">Score: <span id="score">0</span></div>
+      <div class="timer">Time: <span id="time">30</span>s</div>
+      <div class="lives">Lives: <span id="lives">❤️❤️❤️</span></div>
+      <button id="start-btn">Start Game</button>
+    </div>
+
+    <div id="game-container"></div>
+
+    <p style="color:#666; font-size:14px; margin-bottom:20px;">
+      Click 💧 clean drops to collect water. Avoid ☠️ dirty drops!
+      <a href="https://www.charitywater.org" target="_blank" style="color:#2E9DF7;">Learn about charity: water →</a>
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
