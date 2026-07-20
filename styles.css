@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -10,84 +12,183 @@ body {
   align-items: center;
   min-height: 100vh;
   background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 .game-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
+  width: 100%;
+  max-width: 850px;
+  padding: 0 10px;
 }
 
 .game-title {
   color: #131313;
   font-size: 48px;
-  margin-bottom: 5px;
+  font-weight: 900;
+  margin-bottom: 0;
   text-align: center;
+  font-family: 'Nunito', sans-serif;
 }
 
 .game-tagline {
   color: #666;
   font-size: 18px;
-  margin-bottom: 20px;
   text-align: center;
+  font-family: 'Nunito', sans-serif;
 }
 
+/* Difficulty section */
+.difficulty-section {
+  background: white;
+  padding: 16px 24px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 800px;
+}
+
+.difficulty-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.diff-btn {
+  padding: 10px 24px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
+.diff-btn:hover {
+  border-color: #FFC907;
+  background: #fff9e6;
+}
+
+.diff-btn.active {
+  border-color: #FFC907;
+  background: #FFC907;
+  color: #333;
+}
+
+/* Score panel */
 .score-panel {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 800px;
-  padding: 10px;
+  padding: 12px 20px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .score {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
 }
 
 .timer {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+}
+
+.lives {
+  font-size: 20px;
+  font-family: 'Nunito', sans-serif;
 }
 
 #start-btn {
-  padding: 8px 16px;
+  padding: 10px 20px;
   background-color: #FFC907;
   color: #333;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  transition: background 0.2s;
 }
 
 #start-btn:hover {
   background-color: #e6b400;
 }
 
+#start-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Game container */
 #game-container {
   width: 800px;
-  height: 600px;
+  height: 550px;
   background: linear-gradient(180deg, #87CEEB 0%, #e6f7ff 100%);
   border: 2px solid #333;
-  border-radius: 8px;
+  border-radius: 12px;
   position: relative;
   overflow: hidden;
 }
 
+/* Footer */
+.game-footer {
+  background: #2B2B2B;
+  color: white;
+  text-align: center;
+  padding: 20px 40px;
+  border-radius: 12px;
+  width: 800px;
+  margin-bottom: 20px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.game-footer p {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.game-footer a {
+  color: #FFC907;
+  text-decoration: none;
+  font-weight: 700;
+  margin: 0 8px;
+}
+
+.game-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
 @media (max-width: 850px) {
-  .score-panel, #game-container {
+  .score-panel,
+  #game-container,
+  .difficulty-section,
+  .game-footer {
     width: 95vw;
   }
+
   #game-container {
-    height: 70vh;
+    height: 60vh;
   }
+
   .game-title {
     font-size: 32px;
+  }
+
+  .difficulty-buttons {
+    flex-direction: column;
+    align-items: center;
   }
 }
